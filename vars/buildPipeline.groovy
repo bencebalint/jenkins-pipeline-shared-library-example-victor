@@ -11,7 +11,9 @@ def call() {
             stage('Build Test Analyze Package') {
                 agent any
                 steps {
-                    def projectMetadata = readMavenPom file: "pom.xml"
+                    script {
+                        def projectMetadata = readMavenPom file: "pom.xml"
+                    }
                 }
             }
         }
