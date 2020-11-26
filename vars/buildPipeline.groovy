@@ -1,6 +1,5 @@
 def call() {
     pipeline {
-        def projectMetadata
 
         options {
             timeout(time: 3, unit: 'HOURS')
@@ -12,7 +11,7 @@ def call() {
             stage('Build Test Analyze Package') {
                 agent any
                 steps {
-                    projectMetadata = readMavenPom file: "pom.xml"
+                    def projectMetadata = readMavenPom file: "pom.xml"
                 }
             }
         }
