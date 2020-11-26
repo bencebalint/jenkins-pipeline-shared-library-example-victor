@@ -29,7 +29,7 @@ class BuildPipelineTest extends BasePipelineTest {
 
         def library = library()
                 .name('milib')
-                .retriever(gitSource('https://github.com/venosov/jenkins-pipeline-shared-library-example-victor.git'))
+                .retriever(gitSource('https://github.com/bencebalint/jenkins-pipeline-shared-library-example-victor.git'))
                 .targetPath(clonePath)
                 .defaultVersion("master")
                 .allowOverride(true)
